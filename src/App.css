@@ -1,0 +1,147 @@
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: #222;
+	color: #fff;
+}
+
+code {
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+
+.container {
+	max-width: 1230px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+h1 {
+	text-align: center;
+}
+
+.table {
+	width: 100%;
+	overflow: auto;
+}
+.stock-table {
+	border-collapse: collapse;
+	width: 100%;
+	border: 1px solid #555;
+	background-color: #333;
+}
+
+.stock-table th,
+.stock-table td {
+	border: 1px solid #555;
+	padding: 12px;
+	text-align: left;
+}
+
+.stock-table th {
+	background-color: #444;
+}
+
+.stock-table tr {
+	display: flex;
+	width: 100%;
+}
+.stock-table td,
+th {
+	flex: 1;
+	display: flex;
+	align-items: center;
+	padding: 12px;
+}
+.stock-table td span {
+	width: 100px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #ccc;
+}
+.stock-table td.numbers {
+	flex: 0;
+	width: 50px;
+	text-align: center;
+}
+.stock-table th.first {
+	flex: 0 1 50px;
+	display: flex;
+	justify-content: center;
+}
+
+.stock-table tbody tr:hover {
+	background-color: #666;
+}
+
+/* pagination */
+.pagination-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.pagination-button {
+	padding: 10px 20px;
+	margin: 0 5px;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	cursor: pointer;
+	transition: background-color 0.3s;
+}
+
+.pagination-button:first-child {
+	background-color: #007bff;
+}
+
+.pagination-button:last-child {
+	background-color: #28a745;
+}
+
+.pagination-button:hover {
+	filter: brightness(85%);
+}
+
+.pagination-button:disabled {
+	background-color: #6c757d;
+	cursor: not-allowed;
+}
+
+.pagination-info {
+	margin: 0 10px;
+	color: #ccc;
+}
+
+/* loading */
+.spinner-container {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+.spinner {
+	border: 4px solid rgba(0, 0, 0, 0.1);
+	border-left-color: #fff;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
