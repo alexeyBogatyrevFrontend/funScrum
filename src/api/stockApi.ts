@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API_KEY = 'pk_8cb29e968f6e49bf9297da6863dbe632'
+const API_KEY = 'не использую ключ' // использовал этот ключ - pk_8cb29e968f6e49bf9297da6863dbe632
 
 const fetchStockData = async (pageSize: number, page: number) => {
 	const response = await axios.get(
